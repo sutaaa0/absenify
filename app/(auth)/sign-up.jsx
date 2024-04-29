@@ -19,21 +19,21 @@ const SignUp = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const submit = async () => {
-    if(form.username === "" || form.email === "" || form.password === "") {
-      Alert.alert("Error", "Please fill in all the fields")
+    if (form.username === "" || form.email === "" || form.password === "") {
+      Alert.alert("Error", "Please fill in all the fields");
     }
 
-    setIsSubmitting(true)
+    setIsSubmitting(true);
     try {
       const result = await createUser(form.email, form.password, form.username);
       setUser(result);
       setIsLoggedIn(true);
-      
-      router.replace("/home")
+
+      router.replace("/home");
     } catch (error) {
-      Alert.alert("Error", error.message)
+      Alert.alert("Error", error.message);
     } finally {
-      setIsSubmitting(false)
+      setIsSubmitting(false);
     }
   };
 
@@ -41,10 +41,13 @@ const SignUp = () => {
     <SafeAreaView className="bg-primary h-full">
       <ScrollView>
         <View className="w-full justify-center min-h-[82vh] px-4 my-6">
-          <Image source={images.logo} resizeMode="contain" className="w-[115px] h-[35px]" />
-
-          <Text className="text-2xl text-white font-psemibold mt-10">Sign Up to Aora</Text>
-
+          <View className="flex-row justify-start items-center">
+            <Image source={images.tes3} resizeMode="contain" className="w-[100px] h-[100px]" />
+            <Text className="font-psemibold text-white text-5xl mt-4 py-3">bsenify</Text>
+          </View>
+          <Text className="text-2xl text-gray-300 font-psemibold mt-10">
+            Log in to <Text className="text-white font-pbold">Absenify</Text>{" "}
+          </Text>
           <FormField title="Username" value={form.username} handleChangeText={(e) => setForm({ ...form, username: e })} otherStyles="mt-7" />
 
           <FormField title="Email" value={form.email} handleChangeText={(e) => setForm({ ...form, email: e })} otherStyles="mt-7" keyboardType="email-address" />
@@ -55,7 +58,7 @@ const SignUp = () => {
 
           <View className="justify-center pt-5 flex-row gap-2">
             <Text className="text-lg text-gray-100 font-pregular">Have an account already?</Text>
-            <Link href="/sign-in" className="text-lg font-psemibold text-secondary">
+            <Link href="/sign-in" className="text-lg font-pregular text-blue-600">
               Sign In
             </Link>
           </View>

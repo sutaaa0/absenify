@@ -1,13 +1,15 @@
-import { View, Text } from 'react-native'
-import React from 'react'
+import { View, Text, TouchableOpacity } from "react-native";
+import React from "react";
 
-const CardInfo = ({ title, subtitle, containerStyles, titleStyles }) => {
+const CardInfo = ({ title, subtitle, containerStyles, titleStyles, subtitleStyles, handlePress }) => {
   return (
-    <View className={containerStyles}>
-      <Text className={`text-white text-center font-psemibold ${titleStyles} `} >{title}</Text>
-      <Text className="text-sm text-gray-100 text-center font-pregular">{subtitle}</Text>
-    </View>
-  )
-}
+    <TouchableOpacity className={containerStyles} onPress={handlePress}>
+      <Text className={`text-white text-center font-psemibold ${titleStyles} ${title === "Kerja" ? `text-green-500` : null || title === "Izin" ? `text-yellow-500` : null || title === "Sakit" ? `text-red-500` : null} `}>{title}</Text>
+      <Text className={`text-sm text-gray-100 text-center font-pregular ${subtitleStyles}`}>
+        {subtitle}
+      </Text>
+    </TouchableOpacity>
+  );
+};
 
-export default CardInfo
+export default CardInfo;

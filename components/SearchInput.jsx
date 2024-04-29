@@ -12,7 +12,7 @@ const SearchInput = ({ initialQuery }) => {
       <TextInput
         className="flex-1 text-white font-pregular text-base" 
         value={query} 
-        placeholder={"Search for a video topic"} placeholderTextColor="#cdcde0" 
+        placeholder={"Search for data absen"} placeholderTextColor="#cdcde0" 
         onChangeText={(e) => setQuery(e)}
       />
 

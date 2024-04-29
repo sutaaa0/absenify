@@ -1,14 +1,14 @@
 {
   "expo": {
-    "name": "Aora",
-    "slug": "aora",
-    "scheme": "aora",
+    "name": "Absenify",
+    "slug": "absenify",
+    "scheme": "absenify",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/images/tes3.png",
     "userInterfaceStyle": "light",
     "splash": {
-      "image": "./assets/splash.png",
+      "image": "./assets/images/tes2.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
@@ -17,14 +17,14 @@
     ],
     "ios": {
       "supportsTablet": true,
-      "package": "com.suta.aora"
+      "package": "com.suta.absenify"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "package": "com.suta.aora"
+      "package": "com.suta.absenify"
     },
     "web": {
       "favicon": "./assets/favicon.png"
@@ -37,8 +37,9 @@
         "origin": false
       },
       "eas": {
-        "projectId": "e059a247-c782-423b-8b79-54b2498cda32"
+        "projectId": "4874ba6e-b247-45d1-a057-62aefe4a3ec0"
       }
-    }
+    },
+    "owner": "sutaaa"
   }
 }

@@ -12,7 +12,7 @@ const TabIcon = ({ icon, color, name, focused }) => {
                 tintColor={color}
                 className="w-6 h-6"
             />
-            <Text className={`${focused ? 'font-psemibold' : 'font-pregular'} text-xs`} style={{color: color}}>
+            <Text className={`${focused ? 'font-psemibold text-white' : 'font-pregular'} text-xs`} style={{color: "#fefefe"}}>
                 {name}
             </Text>
         </View>
@@ -25,7 +25,7 @@ const TabsLayout = () => {
         <Tabs
             screenOptions={{
                 tabBarShowLabel: false,
-                tabBarActiveTintColor: "#ffa001",
+                tabBarActiveTintColor: "#3636e0",
                 tabBarInactiveTintColor: "#cdcde0",
                 tabBarStyle: {
                     backgroundColor: "#161622",
@@ -50,31 +50,31 @@ const TabsLayout = () => {
                     )
                 }}
             />
-            {/* <Tabs.Screen
-                name='bookmark'
+            <Tabs.Screen
+                name='riwayatabsen'
                 options={{
-                    title: "Bookmark",
+                    title: "Riwayat Absen",
                     headerShown: false,
                     tabBarIcon: ({ color, focused }) => (
                         <TabIcon
                             icon={icons.bookmark}
                             color={color}
-                            name="Bookmark"
+                            name="Riwayat Absen"
                             focused={focused}
                         />
                     )
                 }}
-            /> */}
+            />
             <Tabs.Screen
-                name='create'
+                name='izin'
                 options={{
-                    title: "Cerate",
+                    title: "Izin",
                     headerShown: false,
                     tabBarIcon: ({ color, focused }) => (
                         <TabIcon
-                            icon={icons.plus}
+                            icon={icons.izin}
                             color={color}
-                            name="Create"
+                            name="Izin"
                             focused={focused}
                         />
                     )

@@ -14,12 +14,6 @@ const EmtyState = ({title, subtitle}) => {
 
       <Text className="font-psemibold text-sm text-gray-100">{subtitle}</Text>
 
-    <CustomButton 
-        title={"Create video"}
-        handlePress={() => router.push("/create")}
-        containerStyles={"w-full my-4"}
-    />
-
     </View>
   );
 };
